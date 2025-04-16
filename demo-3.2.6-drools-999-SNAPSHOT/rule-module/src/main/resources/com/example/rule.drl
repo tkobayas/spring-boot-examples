@@ -1,0 +1,11 @@
+package com.example
+
+import com.example.Person;
+
+rule "Check Age"
+    when
+        $p : Person(age >= 18)
+    then
+        $p.setAdult(true);
+        System.out.println($p.getName() + " is adult");
+end
